@@ -229,6 +229,11 @@ input[type="checkbox"] {
   border: 2px solid #ffffff;
 }
 
+.dark-theme .resetbutton:hover {
+  color: #000000;
+  background: #fff;
+}
+
 .dark-theme table {
   background: rgba(255,255,255,0.05);
 }
@@ -236,6 +241,8 @@ input[type="checkbox"] {
 .dark-theme select {
   border: 2px solid #ffffff;
 }
+
+
 /* ========== Responsive Layout for Mobile (≤ 768px) ========== */
 @media (max-width: 768px) {
   header {
@@ -362,4 +369,8 @@ input[type="checkbox"] {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.dark-theme .hamburger {
+  color: #ffffff;
 }
