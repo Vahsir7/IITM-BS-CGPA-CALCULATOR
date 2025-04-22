@@ -8,62 +8,70 @@
   <link rel="icon" type="image/x-icon" href="calc_logo.png">
 </head>
 <body>
-<div class="page-wrapper">
-<header>
-  <h2 class="logo"><img src="calc_logo.png" alt="Calc Logo" width="115" height="115"></h2>
-  <nav>
-    <a class="navigation" href="/">CGPA Calculator</a>
-    <a class="navigation" href="/aboutus.html">About Us</a>
-    <button id="themeToggle" class="navigation">🌙 Dark Mode</button>
-  </nav>
-</header>
+  <div class="page-wrapper">
+    <header>
+      <h2 class="logo"><img src="calc_logo.png" alt="Calc Logo" width="90"></h2>
+    
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    
+      <nav id="drawerNav">
+        <a class="navigation" href="/">CGPA Calculator</a>
+        <a class="navigation" href="/aboutus.html">About Us</a>
+        <button id="themeToggle" class="navigation">🌙 Dark Mode</button>
+      </nav>
+    </header>
+    
 
-<main>
-<div class="cgpa-container">
-  <h2>IITM BS CGPA Calculator <i>by Rishav & Debayan</i></h2>
+    <main>
+      <div class="cgpa-container">
+        <h2>IITM BS CGPA Calculator <i>by Rishav & Debayan</i></h2>
 
-  <div class="filters">
-    <label><input type="checkbox" class="levelFilter" value="fl" checked onchange="loadPage()"> Foundation</label>
-    <label><input type="checkbox" class="levelFilter" value="dp" checked onchange="loadPage()"> Diploma in Programming</label>
-    <label><input type="checkbox" class="levelFilter" value="ds" checked onchange="loadPage()"> Diploma in Data Science</label>
-    <label><input type="checkbox" class="levelFilter" value="dg" checked onchange="loadPage()"> Degree Core</label>
-    <input id="searchBar" type="text" placeholder="Search Subject..." oninput="loadPage()" style="margin-left:20px; padding:5px;">
+        <div class="filters">
+          <label><input type="checkbox" class="levelFilter" value="fl" checked onchange="loadPage()"> Foundation</label>
+          <label><input type="checkbox" class="levelFilter" value="dp" checked onchange="loadPage()"> Diploma in Programming</label>
+          <label><input type="checkbox" class="levelFilter" value="ds" checked onchange="loadPage()"> Diploma in Data Science</label>
+          <label><input type="checkbox" class="levelFilter" value="dg" checked onchange="loadPage()"> Degree Core</label>
+          <input id="searchBar" type="text" placeholder="Search Subject..." oninput="loadPage()">
+        </div>
+
+        <div class="reset-wrapper">
+          <button onclick="resetGrades()" class="resetbutton">Reset All</button>
+        </div>
+
+        <h3>Academic Subjects:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Subject</th><th>Grade</th></tr>
+            </thead>
+            <tbody id="academicBody"></tbody>
+          </table>
+        </div>
+
+        <h3>Project Courses:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Project</th><th>Grade</th></tr>
+            </thead>
+            <tbody id="projectBody"></tbody>
+          </table>
+        </div>
+
+        <div class="cgpa-result">
+          <h1>Total CGPA: <span id="overallCgpa">0.00</span></h1>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h4>&copy; 2025 All rights reserved. <i>Rishav & Debayan</i></h4>
+      <h4><i>Version - 2.2</i><br>
+        View <a href="https://docs.google.com/document/d/1bnaJlt6__mgTGED77UPC94Oyrn6eLz9hk1GAaJOcNEw/edit?usp=sharing" target="_blank">Version Change Log</a>
+      </h4>
+    </footer>
   </div>
-<div class="reset-wrapper">
-  <button onclick="resetGrades()" class="resetbutton">Reset All</button>
-</div>
 
-  <h3>Academic Subjects:</h3>
-  <table>
-    <thead>
-      <tr><th>Subject</th><th>Grade</th></tr>
-    </thead>
-    <tbody id="academicBody"></tbody>
-  </table>
-
-  <h3>Project Courses:</h3>
-  <table>
-    <thead>
-      <tr><th>Project</th><th>Grade</th></tr>
-    </thead>
-    <tbody id="projectBody"></tbody>
-  </table>
-
-  <div style="text-align:center;">
-    <h1>Total CGPA (Academic + Projects): <span id="overallCgpa">0.00</span></h1>
-  </div>
-</div>
-</main>
-
-<footer>
-  <h4>&copy; 2025 All rights reserved. <i>Rishav & Debayan</i></h4>
-  <h4><i>Version - 2.2</i>
-    <br>
-    View <a href="https://docs.google.com/document/d/1bnaJlt6__mgTGED77UPC94Oyrn6eLz9hk1GAaJOcNEw/edit?usp=sharing" target="_blank" style="color:#007bff; text-decoration:none;">Version Change Log</a>
-  </h4>
-</footer>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

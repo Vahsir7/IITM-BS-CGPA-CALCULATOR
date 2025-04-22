@@ -98,6 +98,10 @@ const gradePoints = { S: 10, A: 9, B: 8, C: 7, D: 6, E: 4 };
     });
 
     document.getElementById("overallCgpa").textContent = calcOverallCgpa(saved);
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('drawerNav').classList.toggle('open');
+    });
+    
   }
 
   window.onload = loadPage;

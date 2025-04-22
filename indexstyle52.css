@@ -236,3 +236,130 @@ input[type="checkbox"] {
 .dark-theme select {
   border: 2px solid #ffffff;
 }
+/* ========== Responsive Layout for Mobile (≤ 768px) ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navigation {
+    margin-left: 0;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 140px 20px 40px;
+    align-items: center;
+  }
+
+  .cgpa-container {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters input[type="text"],
+  #searchBar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .reset-wrapper {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th, td {
+    font-size: 0.95em;
+    padding: 6px;
+  }
+
+  .body-about {
+    margin: 120px auto 30px;
+    padding: 0 20px;
+    font-size: 1.5em;
+  }
+
+  footer h4 {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
+}
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #08050C;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Drawer nav for mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 70%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: none;
+    backdrop-filter: blur(10px); /* Optional: subtle blur */
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav a.navigation,
+  nav button.navigation {
+    font-size: 1.2em;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
