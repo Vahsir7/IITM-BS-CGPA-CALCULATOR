@@ -31,12 +31,6 @@ const gradePoints = { S: 10, A: 9, B: 8, C: 7, D: 6, E: 4 };
     { name: "SPG", level: "dg", credits: 4 }
   ];
 
-  const toggleButton = document.getElementById('themeToggle');
-  toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    toggleButton.textContent = document.body.classList.contains('dark-theme') ? '☀️ Light Mode' : '🌙 Dark Mode';
-  });
-  
   function createGradeOptions(selected = "") {
     return ['<option value="">--</option>'].concat(Object.keys(gradePoints).map(g =>
       `<option value="${g}" ${selected === g ? "selected" : ""}>${g}</option>`
