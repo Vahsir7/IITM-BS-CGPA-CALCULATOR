@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITM CGPA Calculator</title>
+  <link rel="stylesheet" href="indexstyle52.css">
+</head>
+<body>
+<div class="page-wrapper">
+<header>
+  <h2 class="logo"><img src="debz_logo.png" alt="DebZ Logo" width="75" height="75"></h2>
+  <nav>
+    <a class="navigation" href="/">CGPA Calculator</a>
+    <a class="navigation" href="/">Grade Calculator</a>
+    <a class="navigation" href="/">Grade Predictor</a>
+    <a class="navigation" href="/">About Us</a>
+  </nav>
+</header>
+
+<main>
+<div class="cgpa-container">
+  <h2>IITM CGPA Calculator <i>by Rishav & Debayan</i></h2>
+
+  <div class="filters">
+    <label><input type="checkbox" class="levelFilter" value="fl" checked onchange="loadPage()"> Foundation</label>
+    <label><input type="checkbox" class="levelFilter" value="dp" checked onchange="loadPage()"> Diploma in Programming</label>
+    <label><input type="checkbox" class="levelFilter" value="ds" checked onchange="loadPage()"> Diploma in Data Science</label>
+    <label><input type="checkbox" class="levelFilter" value="dg" checked onchange="loadPage()"> Degree Core</label>
+    <input id="searchBar" type="text" placeholder="Search Subject..." oninput="loadPage()" style="margin-left:20px; padding:5px;">
+  </div>
+<div class="reset-wrapper">
+  <button onclick="resetGrades()" class="resetbutton">Reset All</button>
+</div>
+
+  <h3>Academic Subjects:</h3>
+  <table>
+    <thead>
+      <tr><th>Subject</th><th>Grade</th></tr>
+    </thead>
+    <tbody id="academicBody"></tbody>
+  </table>
+
+  <h3>Project Courses:</h3>
+  <table>
+    <thead>
+      <tr><th>Project</th><th>Grade</th></tr>
+    </thead>
+    <tbody id="projectBody"></tbody>
+  </table>
+
+  <div style="text-align:center;">
+    <h1>Total CGPA (Academic + Projects): <span id="overallCgpa">0.00</span></h1>
+  </div>
+</div>
+</main>
+
+<footer>
+  <h4>&copy; 2025 All rights reserved. <i>Rishav & Debayan</i></h4>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
