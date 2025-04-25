@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITM BS CGPA Calculator</title>
+  <link rel="stylesheet" href="indexstyle52.css">
+  <link rel="icon" type="image/x-icon" href="calc_logo.png">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h2 class="logo"><img src="calc_logo.png" alt="Calc Logo" width="90"></h2>
+    
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    
+      <nav id="drawerNav">
+        <a class="navigation" href="index.html">CGPA Calculator</a>
+        <a class="navigation" href="aboutus.html">About Us</a>
+        <button id="themeToggle" class="navigation">🌙 Dark Mode</button>
+      </nav>
+    </header>
+
+    <div class="sidebar">
+      <div class="filters">
+        <h2>Search Course:</h2>
+        <input id="searchBar" type="text" placeholder="Search Subject..." oninput="loadPage()"><br><br>
+        <h2>Filters:</h2>
+        <label><input type="checkbox" class="levelFilter" value="fl" checked onchange="loadPage()"> Foundation</label><br>
+        <label><input type="checkbox" class="levelFilter" value="dp" checked onchange="loadPage()"> Diploma in Programming</label><br>
+        <label><input type="checkbox" class="levelFilter" value="ds" checked onchange="loadPage()"> Diploma in Data Science</label><br>
+        <label><input type="checkbox" class="levelFilter" value="dg" checked onchange="loadPage()"> Degree Core</label><br>
+        <label><input type="checkbox" class="levelFilter" value="de" checked onchange="loadPage()"> Degree Electives <i>(Manually add Courses)</i></label>
+      </div>
+    </div>
+
+    <div id="custom-dialog">
+      <div id="dialog-box">
+        <div id="dialog-title">Input</div>
+        <input type="text" id="dialog-input" placeholder="" />
+        <div class="dialog-buttons">
+          <button id="dialog-cancel" class="cancel-btn">Cancel</button>
+          <button id="dialog-ok" class="ok-btn">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="message-modal">
+      <div id="message-box">
+        <div id="message-text">Error message will appear here.</div>
+        <button id="message-close">Close</button>
+      </div>
+    </div>
+
+    <div id="confirm-modal">
+      <div id="confirm-box">
+        <div id="confirm-text">Confirmation message here.</div>
+        <button id="confirm-cancel">Cancel</button>
+        <button id="confirm-ok">Confirm</button>
+      </div>
+    </div>
+
+
+    <main>
+
+      <div class="cgpa-container">
+        <h2>IITM BS CGPA Calculator <i>by Rishav & Debayan</i></h2>
+
+        <div class="buttons-wrapper">
+          <button onclick="addCourse()" class="addbutton">Add Course</button>
+          <button onclick="resetGrades()" class="resetbutton">Reset All</button>
+        </div>
+
+        <h3>Academic Subjects:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Subject</th><th>Grade</th></tr>
+            </thead>
+            <tbody id="academicBody"></tbody>
+          </table>
+        </div>
+
+        <h3>Project Courses:</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Project</th><th>Grade</th></tr>
+            </thead>
+            <tbody id="projectBody"></tbody>
+          </table>
+        </div>
+
+        <div class="cgpa-result">
+          <h1>Total CGPA (Academics + Projects) : <span id="overallCgpa">0.00</span></h1>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h4>&copy; 2025 All rights reserved. <i>Rishav & Debayan</i></h4>
+      <h4><i>Version - 2.2</i><br>
+        View <a href="https://docs.google.com/document/d/1bnaJlt6__mgTGED77UPC94Oyrn6eLz9hk1GAaJOcNEw/edit?usp=sharing" target="_blank">Version Change Log</a>
+      </h4>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
